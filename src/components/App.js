@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { Routines, Exercises, Dashboard } from '../components';
+import { Routines, Exercises, Dashboard, NavBar } from '../components';
 
 import { getSomething } from '../api';
 
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        {/* <Header /> */}
+        <NavBar />
         <Switch>
           <Route exact path="/routines">
             <Routines />
@@ -36,7 +36,7 @@ const App = () => {
           </Route>
 
           <Route exact path="/">
-            <h2>This if the home and/or fallback page.</h2>
+            <h2>This is the home and/or fallback page.</h2>
           </Route>
         </Switch>
       </Router>
